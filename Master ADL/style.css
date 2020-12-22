@@ -1,0 +1,642 @@
+    /*information(s)*/
+/*page index = "première page" et pages secondaires = "les pages des onglets"*/
+
+    /*général*/
+
+#main
+{
+    min-height: 100%;
+    position: relative;
+}
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+    /*header*/
+header /*caractéristiques du header*/
+{
+    width: 100%;
+    height: 280px;
+    background-color:#333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.logo /*positionnement du logo Université de paris*/
+{
+    max-height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.titres1 /*titres page index*/
+{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.titres1 h1
+{
+    margin-top: -50px;
+}
+
+.titres2 /*titres pages secondaires*/
+{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.titres2 h1
+{
+    margin-top: -5px;
+}
+
+.titres2 h2, .titres2 h2 a/*h2 pages secondaires*/
+{
+    margin-top: 13px;
+    color: #50B799;
+}
+
+header h1 /*couleur h1 du header toutes pages*/
+{
+    color: #FFFFFF;
+}
+
+header h2 /*couleur h2 du header toutes pages*/
+{
+    color: #50B799;
+}
+
+.titres_and_nav /*container titres et nav pages secondaires*/
+{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    /*navigateur*/
+/*attention : le navigateur se trouve dans le corps pour page index, et dans le header pour pages secondaires*/
+.nav1 /*container des éléments du menu page index*/
+{
+    width: 475px;
+    height: 315px;
+    background-color: #333333;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.container_nav1
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu1 /*éléments du menu page index*/
+{
+    width: 150px;
+    height: 150px;
+    background-color: #50B799;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid transparent;
+}
+
+.nav2 /*container des éléments du menu pages secondaires*/
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu2 /*éléments du menu pages secondaires*/
+{
+    width: 150px;
+    height: 60px;
+    background-color: #50B799;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 5px 2px;
+    border: 3px solid transparent;
+}
+
+.active /*éléments du menu de la page active parmi les pages secondaires*/
+{
+    width: 150px;
+    height: 60px;
+    background-color: #2E5863;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 5px 2px;
+    border: 3px solid transparent;
+}
+
+.active a
+{
+    color: #FFFFFF;
+}
+
+.menu1:hover, .menu2:hover /*effet sur les éléments du menu toutes pages*/
+{
+    border: 3px solid #333333;
+    transition: .3s;
+}
+
+.menu1  a, .menu2 a /*style des a du menu de toutes pages*/
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.section3 /*section du container du menu de navigation des pages de description des UE*/
+{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_nav3 /*container du menu de navigation des pages de description des UE*/
+{
+    width: 75%;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.menu3:hover, .menu3 a:hover
+{
+   background-color: #50B799;
+   color: #FFFFFF;
+   transition: .3s;
+}
+
+.menu3
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.menu3 a
+{
+    width: 100%;
+    height: 100%;
+    color: #50B799;
+    line-height: 1.5;
+    padding: 2px;
+}
+
+.active2
+{
+    display: flex;
+    background-color: #2E5863;
+    line-height: 1.5;
+}
+
+.active2 a
+{
+    color: #FFFFFF;
+    padding: 2px;
+}
+
+
+    /*corps*/
+.section1 /*corps page index*/
+{
+    width: 100%;
+    height: 520px; /* je ne sais pas comment faire en sorte que ma section prenne automatiquement toute la hauteur entre le header et le footer, donc je mets un nb de pixels à peu près juste*/
+    /*VOIR DANS LE PROJET NETFLIX IL Y A UN TRUC INTERRESSANT A CE SUJET*/
+    /*background-color: green;*/
+    background-image: url("images/paris.jpeg");
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.section2 /*corps pages secondaires*/
+{
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+}
+
+.section2 h2 /*caractéristiques du h2 des articles pages secondaires*/
+{
+    margin: 50px 0 50px 0;
+    padding: 10px;
+    font-size: 2em;
+    text-align: center;
+    width: 75%;
+    border-radius: 50% 20% / 10% 40%;;
+    color: #FFFFFF;
+    background-color: #50B799;
+}
+
+.section2 h3, .nav3 h3 /*caractéristiques des h3 des sous-articles pages secondaires AINSI QUE h3 du nav3 des pages de description des UE*/
+{
+    color: #2E5863;
+    font-size: 1.5em;
+} 
+
+.section2 h4 /*caractéristiques des h4 des sous-articles pages secondaires*/
+{
+    color: #2E5863;
+    padding-top: 15px;
+}
+
+.section2 article/*articles pages secondaires*/
+{
+    width: 75%;
+    margin-bottom: 50px;
+}
+
+.section2 p, .section2 li /*caractéristiques des p et li pages secondaires*/
+{
+    font-size: 0.9;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.section2 a /*couleur des a du corps pages secondaires*/
+{
+    color: #50B799;
+}
+
+.citation /*sources des citations en italique*/
+{
+    font-style: italic;
+}
+
+hr /*caractéristique des séparateurs*/
+{
+    width: 150px;
+    height: 2px;
+    margin: 5px 0 5px 20px;
+    background-color: #2E5863;
+    border: none;
+}
+
+    /*footer*/
+footer /*caractéristiques du footer*/
+{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 310px;
+    padding-top: 20px;
+    background-color:#2E5863;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer a /*couleur des a du footer*/
+{
+    color: #50B799;
+}
+
+ul /*caractéristiques des éléments de liste du footer*/
+{
+    list-style: inside;
+}
+
+    /*tableaux*/
+table /*caractéristique du container tableau*/
+{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #adadad;
+    margin-top: 10px;
+}
+
+.table1
+{
+    height: 400px;
+}
+
+.table2
+{
+    height: 267px;
+}
+    
+th, td /*bordure interne et padding du contenu*/
+{
+    border: 1px solid #adadad;
+    padding: 5px;
+}
+    
+th /*hauteur de la ligne d'en-tête*/
+{
+    height: 50px;
+}
+    
+thead /*couleur de l'en-tête*/
+{
+    background-color: #50B799;
+    color: #FFFFFF;
+}
+    
+.colored /*coloration d'une ligne sur deux*/
+{
+    background-color: #DEDEDE;
+}
+    
+thead th:nth-child(1), td:nth-child(1)  /*largeur de la 1er colonne et alignement du texte*/
+{
+    width: 5%;
+    text-align: center;
+}
+    
+thead th:nth-child(2) /*largeur de la 2e colonne*/
+{
+    width: 58%;
+    text-align: center;
+}
+    
+thead th:nth-child(3), td:nth-child(3) /*largeur de la 3e colonne et alignement du texte*/
+{
+    width: 12%;
+    text-align: center;
+}
+    
+thead th:nth-child(4), td:nth-child(4) /*largeur de la 4e colonne et alignement du texte*/
+{
+    width: 8%;
+    text-align: center;
+}
+
+thead th:nth-child(5), td:nth-child(5) /*largeur de la 5e colonne et alignement du texte*/
+{
+    width: 8%;
+    text-align: center;
+}
+    
+thead th:nth-child(6), td:nth-child(6) /*largeur de la 6e colonne et alignement du texte*/
+{
+    width: 8%;
+    text-align: center;
+}
+
+    /*autres*/
+a /*supprimer le style initial des a tous endroits et toutes pages*/
+{
+    text-decoration: none;
+}
+
+.alinea /*alinéa sur la plupart des paragraphes*/
+{
+    text-indent: 15px;
+}
+
+.center /*center les titres des tableau qui sont en h3*/
+{
+    display: flex;
+    justify-content: center;
+}
+
+    /*responsive*/
+@media screen and (max-width:1024px)
+{
+    .logo /*positionnement du logo Université de paris*/
+    {
+        max-height: 40px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    .titres1 /*titres page index*/
+    {
+        font-size: 1em;
+    }
+    footer
+    {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    .titres1 /*titres page index*/
+    {
+        font-size: 0.8em;
+    }
+
+    .titres2
+    {
+        margin-top: -20px;
+        font-size: 1em;
+    }
+
+    .titres_and_nav
+    {
+        align-items: center;
+        margin-bottom: 1px;
+    }
+
+    .nav2
+    {
+        width: 80%;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    table
+    {
+        font-size: 0.7em;
+    }
+
+    footer
+    {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width:425px)
+{
+    header /*caractéristiques du header*/
+    {
+    height: 180px;
+    }
+
+    .titres1 /*titres page index*/
+    {
+    height: 100px;
+    font-size: 0.7em;
+    padding: 0 10px 0 10px;
+    }
+
+    .titres2
+    {
+        margin: 50px 10px 0 10px;
+        font-size: 0.7em;
+    }
+
+    .nav2
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .active, .menu2
+    {
+        width: 70px;
+        height: 27px;
+        font-size: 0.6em;
+        margin: 0 0 1px 0;
+
+    }
+
+    table
+    {
+        font-size: 0.4em;
+    }
+
+    .titres1 h1
+    {
+        text-align: center;
+    }
+
+    .logo /*positionnement du logo Université de paris*/
+    {
+        max-height: 30px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    
+    .section1
+    {
+        height: 500px;
+    }
+    .nav1 /*container des éléments du menu page index*/
+    {
+        width: 356.25px;
+        height: 236.25px;
+    }
+
+    .menu1/*éléments du menu page index*/
+    {
+    width: 112.5px;
+    height: 112.5px;
+    font-size: 0.8em;
+    }
+
+    footer
+    {
+        font-size: 0.6em;
+        padding: 0 5px 0 5px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:375px)
+{
+    .nav1 /*container des éléments du menu page index*/
+    {
+        width: 332.5px;
+        height: 220.5px;
+    }
+
+    .menu1/*éléments du menu page index*/
+    {
+    width: 105px;
+    height: 105px;
+    font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:320px)
+{
+    header /*caractéristiques du header*/
+    {
+    height: 160px;
+    }
+
+    .titres1 /*titres page index*/
+    {
+    height: 100px;
+    font-size: 0.6em;
+    padding: 0 10px 0 10px;
+    }
+
+    .titres1 h1
+    {
+        text-align: center;
+    }
+
+    .logo /*positionnement du logo Université de paris*/
+    {
+        max-height: 25px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    
+    .section1
+    {
+        height: 300px;
+    }
+
+    .nav1 /*container des éléments du menu page index*/
+    {
+        width: 261.25px;
+        height: 173.25px;
+    }
+
+    .menu1/*éléments du menu page index*/
+    {
+    width: 82.5px;
+    height: 82.5px;
+    font-size: 0.65em;
+    text-align: center;
+    }
+
+    footer
+    {
+        font-size: 0.6em;
+        padding: 0 5px 0 5px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
